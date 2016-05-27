@@ -13,7 +13,7 @@ description: "Bloody Hacker from Silicon Valley"
 # Author's info
 author: 'Yao Pan'
 # edit 'categories' in the front matter of every post to match this username
-nickname: Bloodyhacker
+nickname: yao_pan
 bio: 'My bio.'
 location: 'Bay Area, CA'
 url: 'http://bloodyhacker.github.io/'
@@ -21,7 +21,7 @@ image: 'assets/images/avatar.jpeg'
 
 short_url: 'bloodyhacker.github.io/'
 google_analytics: UA-78062557-1
-disqus: username
+disqus: Bloodyhacker
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
 baseurl: /
 
@@ -42,7 +42,6 @@ exclude: [vendor]
 # Post's page cover as a per-post basis _posts/...
 # Disqus comments as a per-post basis
 # ...
-disqus: Bloodyhacker
 
 
 # Settings for builing master branch with travis-ci
@@ -61,7 +60,7 @@ username: Bloodyhacker
 repo: Bloodyhacker.github.io
 branch: master
 relative_source:
-destination: 
+destination:
 production_url:  https://biomadeira.github.io/
 source_url:      https://github.com/Bloodyhacker/Bloodyhacker.github.io
 
