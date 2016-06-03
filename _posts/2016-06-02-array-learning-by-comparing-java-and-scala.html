@@ -1,0 +1,110 @@
+---
+layout: post
+cover: 'assets/images/cover3.jpg'
+title: Array--Learning by Comparing Java and Scala
+date:   2016-06-02 10:18:00
+tags: test content
+subclass: 'post tag-test tag-content'
+categories: 'casper'
+navigation: True
+logo: 'assets/images/ghost.png'
+disqus: 'Bloodyhacker'
+---
+<h2>Java</h2>
+<p>Declaring Array Variables:</p>
+
+{% highlight java %}
+dataType[] arrayRefVar; // preferred way.
+    or
+dataType arrayRefVar[]; // accommodate C/C++ style
+{% endhighlight %}
+<p>Creating Arrays:</p>
+{% highlight java %}
+dataType[] arrayRefVar = new dataType[arraySize];
+dataType[] arrayRefVar = {value0, value1, ..., valuek};
+{% endhighlight %}
+<p>Multidimensional Arrays:</p>
+A multidimensional array in java is an array whose components are themselves arrays.
+A consequence of this is that the rows are allowed to vary in length.
+{% highlight java %}
+String[][] names = {
+            {"Mr. ", "Mrs. ", "Ms. "},
+            {"Smith", "Jones"}
+        };
+{% endhighlight %}
+
+<p>Processing Arrays</p>
+{% highlight java %}
+public class TestArray {
+
+   public static void main(String[] args) {
+      double[] myList = {1.9, 2.9, 3.4, 3.5};
+
+      // Print all the array elements
+      for (int i = 0; i < myList.length; i++) {
+         System.out.println(myList[i] + " ");
+      }
+      // Summing all elements
+      double total = 0;
+      for (int i = 0; i < myList.length; i++) {
+         total += myList[i];
+      }
+      System.out.println("Total is " + total);
+      // Finding the largest element
+      double max = myList[0];
+      for (int i = 1; i < myList.length; i++) {
+         if (myList[i] > max) max = myList[i];
+      }
+      System.out.println("Max is " + max);
+   }
+}
+{% endhighlight %}
+<p>Copying Arrays:</p>
+{% highlight java %}
+public static void arraycopy(Object src, int srcPos,
+                             Object dest, int destPos, int length)
+{% endhighlight %}
+{% highlight java %}
+class ArrayCopyDemo {
+    public static void main(String[] args) {
+        char[] copyFrom = { 'd', 'e', 'c', 'a', 'f', 'f', 'e',
+			    'i', 'n', 'a', 't', 'e', 'd' };
+        char[] copyTo = new char[7];
+
+        System.arraycopy(copyFrom, 2, copyTo, 0, 7);
+        System.out.println(new String(copyTo));
+    }
+}
+{% endhighlight %}
+{% highlight java %}
+class ArrayCopyOfDemo {
+    public static void main(String[] args) {
+
+        char[] copyFrom = {'d', 'e', 'c', 'a', 'f', 'f', 'e',
+            'i', 'n', 'a', 't', 'e', 'd'};
+
+        char[] copyTo = java.util.Arrays.copyOfRange(copyFrom, 2, 9);
+
+        System.out.println(new String(copyTo));
+    }
+}
+{% endhighlight %}
+<p>Array Manipulations</p>
+java.util.Arrays
+Some other useful operations provided by methods in the java.util.Arrays class, are:
+
+Searching an array for a specific value to get the index at which it is placed (the binarySearch method).
+Comparing two arrays to determine if they are equal or not (the equals method).
+Filling an array to place a specific value at each index (the fill method).
+Sorting an array into ascending order. This can be done either sequentially, using the sort method, or concurrently, using the parallelSort method introduced in Java SE 8. Parallel sorting of large arrays on multiprocessor systems is faster than sequential array sorting.
+
+<p></p>
+
+<h4>Practice</h4>
+<p>use leetcode and hackerrank problems to illustrate above content.But only links to other posts</p>
+<h4>Referrence</h4>
+http://www.tutorialspoint.com/java/java_arrays.htm
+https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html
+https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html
+https://docs.oracle.com/javase/specs/jls/se8/html/jls-10.html
+https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html
